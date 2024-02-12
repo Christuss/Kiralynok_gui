@@ -26,13 +26,25 @@ public class Tabla {
         
     }
     
-    public void UresOszlopokSzama() {
-        
+    public int UresOszlopokSzama() {
+        int s = 0;
+        for (int i = 0; i < 8; i++) {
+            if (UresOszlop(i)) {
+                s++;
+            }
+        }
+        return s;
         
     }
     
-    public void UresSorokSzama() {
-        
+    public int UresSorokSzama() {
+        int s = 0;
+        for (int i = 0; i < 8; i++) {
+            if (UresSor(i)) {
+                s++;
+            }
+        }
+        return s;
      
     }
     

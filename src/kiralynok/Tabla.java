@@ -8,11 +8,11 @@ package kiralynok;
  *
  * @author User
  */
-public class Tábla {
+public class Tabla {
     String[][] T;
     String UresCella;
 
-    public Tábla(String UresCella) {
+    public Tabla(String UresCella) {
         this.UresCella = UresCella;
         T = new String[8][8];
         for (int i = 0; i < 8; i++) {
@@ -39,8 +39,16 @@ public class Tábla {
         
     }
     
-    void Megjelenit() {
-        
+    public String Megjelenit() {
+       String s = "";
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                s += T[i][j] + " ";
+            }
+            s += "\n";
+            
+        }
+       return s; 
     }
     
     void Tabla() {

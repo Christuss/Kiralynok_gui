@@ -10,9 +10,18 @@ package kiralynok;
  */
 public class Tábla {
     String[][] T;
-    String[] UresCella;
+    String UresCella;
 
-    
+    public Tábla(String UresCella) {
+        this.UresCella = UresCella;
+        T = new String[8][8];
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                T[i][j] = this.UresCella;
+        }
+        }
+        
+    }
     
     void UresOszlopokSzama() {
         

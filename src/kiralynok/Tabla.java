@@ -29,7 +29,7 @@ public class Tabla {
     public int UresOszlopokSzama() {
         int s = 0;
         for (int i = 0; i < 8; i++) {
-            if (UresOszlop(i)) {
+            if (!UresOszlop(i)) {
                 s++;
             }
         }
@@ -40,7 +40,7 @@ public class Tabla {
     public int UresSorokSzama() {
         int s = 0;
         for (int i = 0; i < 8; i++) {
-            if (UresSor(i)) {
+            if (!UresSor(i)) {
                 s++;
             }
         }

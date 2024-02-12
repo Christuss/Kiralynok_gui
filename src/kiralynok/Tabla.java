@@ -26,12 +26,14 @@ public class Tabla {
         
     }
     
-    void UresOszlopokSzama() {
+    public void UresOszlopokSzama() {
+        
         
     }
     
-    void UresSorokSzama() {
+    public void UresSorokSzama() {
         
+     
     }
     
     public void Elhelyez(int n) {
@@ -66,11 +68,23 @@ public class Tabla {
         
     }
     
-    void UresOszlop() {
-        
+    public boolean UresOszlop(int oszlop) {
+        for (int i = 0; i < 8; i++) {
+            if (T[oszlop][i].equals("K")) {
+                return true;
+            }
+            
+        }
+        return false;
     }
     
-    void UresSor() {
-        
+    public boolean UresSor(int sor) {
+        for (int i = 0; i < 8; i++) {
+            if (T[i][sor].equals("K")) {
+                return true;
+            }
+            
+        }
+        return false;
     }
 }

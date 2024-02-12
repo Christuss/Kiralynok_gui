@@ -4,6 +4,10 @@
  */
 package kiralynok;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author User
@@ -15,7 +19,11 @@ public class Kiralynok extends javax.swing.JFrame {
      */
     public Kiralynok() {
         Tabla tabla = new Tabla("*");
-        
+        try {
+            tabla.FajlbaIr();
+        } catch (IOException ex) {
+            Logger.getLogger(Kiralynok.class.getName()).log(Level.SEVERE, null, ex);
+        }
         initComponents();
         tabla.Elhelyez(8);
         jTextArea1.setText(tabla.Megjelenit());

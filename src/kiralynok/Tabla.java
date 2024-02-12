@@ -4,6 +4,9 @@
  */
 package kiralynok;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 
 /**
@@ -60,8 +63,15 @@ public class Tabla {
         }
     }
     
-    void FajlbaIr() {
-        
+    void FajlbaIr() throws IOException {
+        String s = "";
+        File fajl = new File("tablak64.txt");
+        for (int i = 0; i < 64; i++) {
+            s += new Tabla("*").Megjelenit() + "\n";
+        }
+        try (FileWriter fIr = new FileWriter(fajl)) {
+            fIr.write(s);
+        }
     }
     
     public String Megjelenit() {
@@ -76,9 +86,6 @@ public class Tabla {
        return s; 
     }
     
-    void Tabla() {
-        
-    }
     
     public boolean UresOszlop(int oszlop) {
         for (int i = 0; i < 8; i++) {

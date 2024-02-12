@@ -4,6 +4,8 @@
  */
 package kiralynok;
 
+import java.util.Random;
+
 /**
  *
  * @author User
@@ -11,6 +13,7 @@ package kiralynok;
 public class Tabla {
     String[][] T;
     String UresCella;
+    Random rnd = new Random();
 
     public Tabla(String UresCella) {
         this.UresCella = UresCella;
@@ -31,8 +34,16 @@ public class Tabla {
         
     }
     
-    void Elhelyez() {
-        
+    void Elhelyez(int n) {
+        for (int i = 0; i < n; i++) {
+            int s1 = rnd.nextInt(8);
+            int s2 = rnd.nextInt(8);
+            if (T[s1][s2].equals("K")) {
+                s1 = rnd.nextInt(8);
+                s2 = rnd.nextInt(8);
+            }
+            T[s1][s2] = "K";
+        }
     }
     
     void FajlbaIr() {

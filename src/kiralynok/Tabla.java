@@ -34,7 +34,7 @@ public class Tabla {
         
     }
     
-    void Elhelyez(int n) {
+    public void Elhelyez(int n) {
         for (int i = 0; i < n; i++) {
             int s1 = rnd.nextInt(8);
             int s2 = rnd.nextInt(8);

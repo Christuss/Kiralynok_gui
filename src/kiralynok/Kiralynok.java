@@ -14,9 +14,10 @@ public class Kiralynok extends javax.swing.JFrame {
      * Creates new form Kiralynok
      */
     public Kiralynok() {
-        Tabla tabla = new Tabla(".");
+        Tabla tabla = new Tabla("*");
         
         initComponents();
+        tabla.Elhelyez(8);
         jTextArea1.setText(tabla.Megjelenit());
     }
 
